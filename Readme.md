@@ -17,4 +17,4 @@ This a Web App for car data analysis and visualization of different comparisons 
     * Cars count by Fuel type
 
 ---------------------
-Project URL: http://8c5c-35-229-16-233.ngrok.io/
+Project URL: http://a2b9-35-229-16-233.ngrok.io
