@@ -1,6 +1,6 @@
 # Microsoft Engage 2022
 
-This a Web App for car data analysis and visualization of different comparsions and correlations in the form of block diagrams, historgrams, pie charts, etc.
+This a Web App for car data analysis and visualization of different comparisons and correlations in the form of block diagrams, histograms, pie charts, etc.
 
 ----------------------
 ## Process followed:
