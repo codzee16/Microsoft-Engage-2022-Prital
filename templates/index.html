@@ -1,128 +1,181 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Prital Project</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <style>
-            .coloured-back {
-            background: rgb(190,230,255);
-            background: linear-gradient(90deg, rgba(190,230,255,1) 0%, rgba(255,255,255,1) 50%, rgba(190,230,255,1) 100%);
-            }
-            .text-align-center {
+
+<head>
+    <title>Microsoft Engage 2022 - Prital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        .coloured-back {
+            background: rgb(190, 230, 255);
+            background: linear-gradient(90deg, rgba(190, 230, 255, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(190, 230, 255, 1) 100%);
+        }
+
+        .text-align-center {
             text-align: center;
-            }
-        </style>
-    </head>
-    <body class="coloured-back">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-        <h1 class="text-align-center mt-4">Microsoft Engage 2022</h1>
-        <p class="text-align-center mt-4">Description of whole project</p>
-        <hr class="solid">
-        
-        <div class="card mt-4 m-auto" style="width: 90%;">
-            <div class="card-body">
-                <h5 class="card-title">Chart 1</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Chart description: The graph plots correlation between various features of cars</h6>
-                <hr class="solid">
-                <h6 class="card-subtitle mb-2 text-muted">Logic</h6>
-                <ul>
-                    <li>I have used Seaborn a Python data visualization library built on top of Matplotlib. </li>
-                    <li>A heatmap is used which is a graphical representation of data that uses a system of color-coding to represent different values.</li>
-                   
-                </ul>
-                <hr class="solid">
-                <h6 class="card-subtitle mb-2 text-muted">Chart</h6>
-                <div class="text-align-center">
-                    <img class="justify-content-center" src="{{ url_for('visualize1') }}">
-                </div>
-                <hr class="solid">
-                <h6 class="card-subtitle mb-2 text-muted">Inference</h6>
-                <ul>
-                    <li>Ex-Showroom price is positively correlated to Displacement.</li>
-                    <li>Ex-Showroom Price is Positively Correlated to the number of Cylinders. This means, more the number of cylinders, more the ex-showroom price.</li>
-                    <li>The more the number of cylinders in a car, the more will be its displacement. Generally speaking, the higher an engine’s displacement the more power it can create.</li>
-                    <li>The number of doors is highly negatively correlated with Displacement.</li>
-                </ul>
+        }
+    </style>
+</head>
+
+<body class="coloured-back">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <h1 class="text-align-center mt-4">Microsoft Engage 2022</h1>
+    <p class="text-align-center mt-4">This a Web App for car data analysis and visualization of different comparsions
+        and correlations in the form of block diagrams, historgrams, pie charts, etc.
+    </p>
+    <hr class="solid">
+    <h5 class="card-title mb-2 text-muted">Process Followed:</h5>
+    <ol>
+        <li>Data Cleaning
+            <ol>
+                <li>String to number conversion</li>
+                <li>Null value filtering</li>
+                <li>Removal of units</li>
+            </ol>
+        </li>
+        <li>Data Analysis</li>
+        <li>Data Interpretation
+            <ol>
+                <li>Correlation of features</li>
+                <li>Top car making companies</li>
+                <li>Cars by car Body type</li>
+                <li>Relation between Displacement and Price</li>
+                <li>Cars count by Fuel type</li>
+            </ol>
+        </li>
+    </ol>
+
+    <hr class="solid">
+    <div class="card mt-4 m-auto" style="width: 90%;">
+        <div class="card-body">
+            <h5 class="card-title">Correlation of features</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Description: The graph plots correlation between various features
+                of cars</h6>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Logic</h6>
+            <ul>
+                <li>I have used Seaborn a Python data visualization library built on top of Matplotlib. </li>
+                <li>A heatmap is used which is a graphical representation of data that uses a system of color-coding to
+                    represent different values.</li>
+
+            </ul>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Chart</h6>
+            <div class="text-align-center">
+                <img class="justify-content-center" src="{{ url_for('visualize1') }}">
+            </div>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Inference</h6>
+            <ul>
+                <li>Ex-Showroom price is positively correlated to Displacement.</li>
+                <li>Ex-Showroom Price is Positively Correlated to the number of Cylinders. This means, more the number
+                    of cylinders, more the ex-showroom price.</li>
+                <li>The more the number of cylinders in a car, the more will be its displacement. Generally speaking,
+                    the higher an engine’s displacement the more power it can create.</li>
+                <li>The number of doors is highly negatively correlated with Displacement.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card mt-4 m-auto" style="width: 90%;">
+        <div class="card-body">
+            <h5 class="card-title">Top car making companies</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Description: It represents brands with the most number of cars in
+                the Indian market.</h6>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Logic</h6>
+            <ul>
+                <li>I've used pie chart to represent brands with the most number of cars in the Indian market.</li>
+                <li>Value_counts() function of pandas is used to count the numbers of cars of specific brand.</li>
+
+            </ul>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Chart</h6>
+            <div class="text-align-center">
+                <img class="justify-content-center" src="{{ url_for('visualize2') }}">
+            </div>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Inference</h6>
+            <li>Maruti Suzuki has more car variants than any other company in India.</li>
+            <li>The Top 5 companies with more than car variants in India are Maruti Suzuki, Hyundai, Mahindra, Tata, and
+                Toyota.</li>
+            <li>Sports car variants are very low.</li>
+        </div>
+    </div>
+
+    <div class="card mt-4 m-auto" style="width: 90%;">
+        <div class="card-body">
+            <h5 class="card-title">Cars count by Body type</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Description: It represents cars by car body Type.</h6>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Logic</h6>
+            <ul>
+                <li>I have used Seaborn a Python data visualization library built on top of Matplotlib.</li>
+                <li>The graph plots cars by car body type.</li>
+
+            </ul>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Chart</h6>
+            <div class="text-align-center">
+                <img class="justify-content-center" src="{{ url_for('visualize3') }}">
+            </div>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Inference</h6>
+            <li>Indian market is favourable for SUVs, sedans, and Hatchback.</li>
+        </div>
+    </div>
+    <div class="card mt-4 m-auto" style="width: 90%;">
+        <div class="card-body">
+            <h5 class="card-title">Relation between Displacement and Price</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Description: It plots a scatterplot between displacement and price based on the Body type of the cars.</h6>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Logic</h6>
+            <ul>
+                <li>I have used Seaborn a Python data visualization library built on top of Matplotlib.</li>
+                <li>It shows Relation between Displacement and Price</li>
                 
-             
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+
+            </ul>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Chart</h6>
+            <div class="text-align-center">
+                <img class="justify-content-center" src="{{ url_for('visualize4') }}">
             </div>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Inference</h6>
+            <li>Tge data is self explanatory.</li>
+            <li>The price and power of the sports cars is the highest.</li>
         </div>
-        
-           <div class="card mt-4 m-auto" style="width: 90%;">
-            <div class="card-body">
-                <h5 class="card-title">Chart 2</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Chart description: It represents brands with the most number of cars in the Indian market.</h6>
-                <hr class="solid">
-                <h6 class="card-subtitle mb-2 text-muted">Logic</h6>
-                <ul>
-                    <li>I've used pie chart to represent brands with the most number of cars in the Indian market.</li>
-                    <li>Value_counts() function of pandas is used to count the numbers of cars of specific brand.</li>
-         
-                </ul>
-                <hr class="solid">
-                <h6 class="card-subtitle mb-2 text-muted">Chart</h6>
-                <div class="text-align-center">
-                    <img class="justify-content-center" src="{{ url_for('visualize2') }}">
-                </div>
-                <hr class="solid">
-                <h6 class="card-subtitle mb-2 text-muted">Inference</h6>
-                   <li>Maruti Suzuki has more car variants than any other company in India.</li>
-                    <li>The Top 5 companies with more than car variants in India are Maruti Suzuki, Hyundai, Mahindra, Tata, and Toyota.</li>                
-                   <li>Sports car variants are very low.</li> 
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+
+
+    <div class="card mt-4 m-auto" style="width: 90%;">
+        <div class="card-body">
+            <h5 class="card-title">Cars count by Fuel Type</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Description: It represents cars count by Engine Fuel Type.</h6>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Logic</h6>
+            <ul>
+
+                <li>The graph plots Cars count by Engine Fuel Type.</li>
+
+            </ul>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Chart</h6>
+            <div class="text-align-center">
+                <img class="justify-content-center" src="{{ url_for('visualize8') }}">
             </div>
-        </div>
-        
-        <div class="card mt-4 m-auto" style="width: 90%;">
-            <div class="card-body">
-                <h5 class="card-title">Chart 3</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Chart description: It represents cars by car body Type.</h6>
-                <hr class="solid">
-                <h6 class="card-subtitle mb-2 text-muted">Logic</h6>
-                <ul>
-                    <li>I have used Seaborn a Python data visualization library built on top of Matplotlib.</li>
-                    <li>The graph plots cars by car body type.</li>
-         
-                </ul>
-                <hr class="solid">
-                <h6 class="card-subtitle mb-2 text-muted">Chart</h6>
-                <div class="text-align-center">
-                    <img class="justify-content-center" src="{{ url_for('visualize3') }}">
-                </div>
-                <hr class="solid">
-                <h6 class="card-subtitle mb-2 text-muted">Inference</h6>
-                   <li>Indian market is favourable for SUVs, sedans, and Hatchback.</li>
-                   
-                  
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-            </div>
-        </div>
-        
-        
-        <div class="card mt-4 m-auto" style="width: 90%;">
-            <div class="card-body">
-                <h5 class="card-title">Chart 4</h5>
-                <h6 class="card-subtitle mb-2 text-muted">Chart description: It represents cars count by Engine Fuel Type.</h6>
-                <hr class="solid">
-                <h6 class="card-subtitle mb-2 text-muted">Logic</h6>
-                <ul>
-                    
-                    <li>The graph plots Cars count by Engine Fuel Type.</li>
-         
-                </ul>
-                <hr class="solid">
-                <h6 class="card-subtitle mb-2 text-muted">Chart</h6>
-                <div class="text-align-center">
-                    <img class="justify-content-center" src="{{ url_for('visualize4') }}">
-                </div>
-                <hr class="solid">
-                <h6 class="card-subtitle mb-2 text-muted">Inference</h6>
-                   <li>Almost 90% of Indian cars run on Petrol or Diesel. This is Scary if we see it from an Environment point of view.</li>
-                   <li>This data is going to change because electric vehicles have arrived in India.
-                   </li>
-                   
-                  
-             
-    </body>
+            <hr class="solid">
+            <h6 class="card-subtitle mb-2 text-muted">Inference</h6>
+            <li>Almost 90% of Indian cars run on Petrol or Diesel. This is Scary if we see it from an Environment point
+                of view.</li>
+            <li>This data is going to change because electric vehicles have arrived in India.
+            </li>
+
+
+
+</body>
+
 </html>
