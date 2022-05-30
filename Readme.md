@@ -1,3 +1,4 @@
+
 # Microsoft Engage 2022
 
 This a Web App for car data analysis and visualization of different comparisons and correlations in the form of block diagrams, histograms, pie charts, etc.
@@ -18,3 +19,14 @@ This a Web App for car data analysis and visualization of different comparisons 
 
 ---------------------
 Project URL: http://4f31-35-204-207-35.ngrok.io/
+
+---------------------
+## Output
+![Output](/output/output1.png)
+![Output](/output/output2.png)
+![Output](/output/output3.png)
+![Output](/output/output4.png)
+![Output](/output/output5.png)
+![Output](/output/output6.png)
+![Output](/output/output7.png)
+![Output](/output/output8.png)
